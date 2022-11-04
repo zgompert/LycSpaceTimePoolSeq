@@ -5,6 +5,7 @@ Notes on my analyses of our pool-seq Lycaeides space-time data set
 The pool-seq data are currently in /uufs/chpc.utah.edu/common/home/gompert-group2/data/Lycaeides_poolSeq/. The current list of samples follows:
 
 | Population | Samples (N)|
+|------------|------------|
 | ABM | ABM20 () |
 | BCR | BCR17 (), BCR17rep () |
 | BHP | BHP19 () |
