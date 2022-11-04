@@ -31,3 +31,8 @@ The pool-seq data are currently in /uufs/chpc.utah.edu/common/home/gompert-group
 | YG | YT98 (33), YG20 (48) |
 
 Replicates (rep) are the same DNA extractions re-pooled and sequenced as a distinct sample. MEN = outgroup.
+
+# DNA Sequence Alignment
+
+I am aligning the DNA sequence data to the updated (based on PacBio) *L. melissa* genome. I am using `bwa-mem2` for this, which is basically just a sped up version of `bwa mem` that also works directly with gzipped files.
+
