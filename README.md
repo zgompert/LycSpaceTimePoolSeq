@@ -92,3 +92,4 @@ foreach $fq1 (@ARGV){
 	$pm->finish;
 }
 ```
+I am pipping the results on to `samtools` (version 1.16) to compress, sort and index the alignments.
