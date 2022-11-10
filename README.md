@@ -93,3 +93,58 @@ foreach $fq1 (@ARGV){
 }
 ```
 I am pipping the results on to `samtools` (version 1.16) to compress, sort and index the alignments.
+
+I then merged the bam files for each population using `samtools` version 1.16. This was donw with the following shell script:
+
+```bash
+#!/bin/sh
+#SBATCH --time=240:00:00
+#SBATCH --nodes=1
+#SBATCH --ntasks=20
+#SBATCH --account=gompert-np
+#SBATCH --partition=gompert-np
+#SBATCH --job-name=merge
+#SBATCH --mail-type=FAIL
+#SBATCH --mail-user=zach.gompert@usu.edu
+
+module load samtools
+##Version: 1.16 (using htslib 1.16)
+
+cd /uufs/chpc.utah.edu/common/home/gompert-group2/data/Lycaeides_poolSeq/Alignment
+
+perl ../Scripts/MergeFork.pl 
+```
+
+Which runs
+
+
+```perl
+#!/usr/bin/perl
+#
+# merge alignments for each population sample with samtools version XX 
+#
+
+
+use Parallel::ForkManager;
+my $max = 40;
+my $pm = Parallel::ForkManager->new($max);
+
+open(IDS,"pids.txt");
+while(<IDS>){
+	chomp;
+	push(@IDs,$_);
+}
+close(IDS);
+
+FILES:
+foreach $id (@IDs){
+	$pm->start and next FILES; ## fork
+        system "samtools merge -c -p -o Merged/$id.bam $id"."_*.bam\n";
+	system "samtools index -@ 2 Merged/$id.bam\n";
+	$pm->finish;
+}
+
+$pm->wait_all_children;
+```
+
+pids.txt lists all of the population IDs.
