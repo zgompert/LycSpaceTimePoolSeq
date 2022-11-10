@@ -148,3 +148,58 @@ $pm->wait_all_children;
 ```
 
 pids.txt lists all of the population IDs.
+
+# Removing PCR duplicates
+
+I am using `samtools` (version 1.16) to remove PCR duplicates. This is more efficient than `PicardTools` and performs similarly, see [Ebbert 2016](https://link.springer.com/article/10.1186/s12859-016-1097-3). I am following the standard prtocol from [`samtools`](https://www.htslib.org/doc/samtools-markdup.html). I am using the default option (same as `-m t`) to measure positions based on template start/end. And I am using `-r` to not just mark but remove duplicates. The submission script is:
+
+```bash
+#!/bin/sh
+#SBATCH --time=240:00:00
+#SBATCH --nodes=1
+#SBATCH --ntasks=20
+#SBATCH --account=gompert-np
+#SBATCH --partition=gompert-np
+#SBATCH --job-name=dedup
+#SBATCH --mail-type=FAIL
+#SBATCH --mail-user=zach.gompert@usu.edu
+
+module load samtools
+##Version: 1.16 (using htslib 1.16)
+
+
+cd /uufs/chpc.utah.edu/common/home/gompert-group2/data/Lycaeides_poolSeq/Alignment
+
+perl ../Scripts/RemoveDupsFork.pl *bam
+```
+
+Which runs
+
+```perl
+#!/usr/bin/perl
+#
+# PCR duplicate removal with samtools
+#
+
+
+use Parallel::ForkManager;
+my $max = 40;
+my $pm = Parallel::ForkManager->new($max);
+
+FILES:
+foreach $bam (@ARGV){
+	$pm->start and next FILES; ## fork
+	$bam =~ m/^([A-Za-z0-9]+)/ or die "failed to match $bam\n";
+	$base = $1;
+	system "samtools collate -o co_$base.bam $bam\n";
+	system "samtools fixmate -m co_$base.bam fix_$base.bam\n";
+	system "samtools sort -o sort_$base.bam fix_$base.bam\n";
+	## using default definition of dups
+	## measure positions based on template start/end (default). = -m t
+	system "markdup -r sort_$base.bam dedup_$base.bam\n";
+	$pm->finish;
+}
+
+$pm->wait_all_children;
+```
+
