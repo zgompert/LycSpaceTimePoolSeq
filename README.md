@@ -191,12 +191,12 @@ foreach $bam (@ARGV){
 	$pm->start and next FILES; ## fork
 	$bam =~ m/^([A-Za-z0-9]+)/ or die "failed to match $bam\n";
 	$base = $1;
-	system "samtools collate -o co_$base.bam $bam\n";
+	system "samtools collate -o co_$base.bam $bam /scratch/general/nfs1/dedup/t$bam\n";
 	system "samtools fixmate -m co_$base.bam fix_$base.bam\n";
 	system "samtools sort -o sort_$base.bam fix_$base.bam\n";
 	## using default definition of dups
 	## measure positions based on template start/end (default). = -m t
-	system "markdup -r sort_$base.bam dedup_$base.bam\n";
+	system "markdup -T /scratch/general/nfs1/dedup -r sort_$base.bam dedup_$base.bam\n";
 	$pm->finish;
 }
 
