@@ -168,9 +168,9 @@ module load samtools
 ##Version: 1.16 (using htslib 1.16)
 
 
-cd /uufs/chpc.utah.edu/common/home/gompert-group2/data/Lycaeides_poolSeq/Alignment
+cd /scratch/general/nfs1/dedup
 
-perl ../Scripts/RemoveDupsFork.pl *bam
+perl /uufs/chpc.utah.edu/common/home/gompert-group2/data/Lycaeides_poolSeq/Scripts/RemoveDupsFork.pl *bam
 ```
 
 Which runs
