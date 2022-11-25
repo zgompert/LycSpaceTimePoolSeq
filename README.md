@@ -203,3 +203,193 @@ foreach $bam (@ARGV){
 $pm->wait_all_children;
 ```
 
+# Variant Calling
+
+I am trying several approaches for variant calling. First, I am using `GATK` version (4.1.4.1) to call variants with the `HaplotypeCaller` and in a manner that is aware of the total ploidy in each pooled sample. Importantly, this does not require indel realignment as that is done within the `HaplotypeCaller` too. This is quite slow, but might be the best bet long term. At minimum, I want to compare this to simpler methods. Here is where I am at so far with this.
+
+Submission script for variant calling by chromosome; this step is making the g.vcf files for joint variant calling,
+
+```bash
+#!/bin/sh
+#SBATCH --time=240:00:00
+#SBATCH --nodes=1
+#SBATCH --ntasks=24
+#SBATCH --account=gompert-kp
+#SBATCH --partition=gompert-kp
+#SBATCH --job-name=gatk
+#SBATCH --mail-type=FAIL
+#SBATCH --mail-user=zach.gompert@usu.edu
+
+
+module load gatk
+
+cd /scratch/general/nfs1/dedup
+
+perl /uufs/chpc.utah.edu/common/home/gompert-group2/data/Lycaeides_poolSeq/Scripts/GatkForkLg.pl dedup*bam
+```
+which runs
+
+```perl
+#!/usr/bin/perl
+#
+# make g.vcf files 
+#
+
+
+use Parallel::ForkManager;
+my $max = 48;
+my $pm = Parallel::ForkManager->new($max);
+
+my $genome ="/uufs/chpc.utah.edu/common/home/gompert-group3/data/LmelGenome/Lmel_dovetailPacBio_genome.fasta";
+
+my @ch = (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20);## not all of them
+
+
+## get ploidy for each ID
+open(IN, "/uufs/chpc.utah.edu/common/home/gompert-group2/data/Lycaeides_poolSeq/LycSamSizeAutoZ.txt") or die;
+while(<IN>){
+	chomp;
+	@line = split(" ",$_);
+	$id{$line[0]} = $line[1];
+}
+close(IN);
+
+foreach $ch (@ch){
+	foreach $bam (@ARGV){
+		$pm->start and next; ## fork
+       		$bam =~ m/dedup_([A-Z]+\d+)/;
+		$pid = $1;
+		$pl = $id{$pid};
+		$out = $bam;
+        	$out =~ s/bam/g.vcf/ or die "failed here: $out\n";
+		$out = "LG$ch"."_$out";
+		$chfile = "chrom$ch".".list";
+		system "java -jar /uufs/chpc.utah.edu/sys/installdir/gatk/gatk-4.1.4.1/gatk-package-4.1.4.1-local.jar HaplotypeCaller -R $genome -L $chfile -I $bam -O $out -heterozygosity 0.001 -mbq 20 -ERC GVCF -ploidy $pl\n";
+
+
+		$pm->finish;
+
+	}
+}
+
+$pm->wait_all_children;
+```
+
+I do not expect this to fully finish before the time limit or a schedule outage, but I will at least have some chromosomes done.
+
+In the meantime, I am pursuing an alternative (simpler) approach variant calling with `bcftools` (version 1.16). For now, I did not even bother with inde realignment (I should if I ultimately go this route) and this approach is not aware I have pooled data. But it is a quick way to get to a population structure sanity check on the data (before doing a bunch more sequencing). 
+
+For this, I ran the following submission script,
+
+```bash
+#!/bin/sh
+#SBATCH --time=240:00:00
+#SBATCH --nodes=1
+#SBATCH --ntasks=24
+#SBATCH --account=gompert-np
+#SBATCH --partition=gompert-np
+#SBATCH --job-name=bcf_call
+#SBATCH --mail-type=FAIL
+#SBATCH --mail-user=zach.gompert@usu.edu
+
+
+module load samtools
+## version 1.16
+module load bcftools
+## version 1.16
+
+cd /scratch/general/nfs1/dedup
+
+perl /uufs/chpc.utah.edu/common/home/gompert-group2/data/Lycaeides_poolSeq/Scripts/BcfForkLg.pl chrom*list 
+```
+
+which runs
+
+```perl
+#!/usr/bin/perl
+#
+# samtools/bcftools variant calling by LG 
+#
+
+
+use Parallel::ForkManager;
+my $max = 26;
+my $pm = Parallel::ForkManager->new($max);
+
+my $genome ="/uufs/chpc.utah.edu/common/home/gompert-group3/data/LmelGenome/Lmel_dovetailPacBio_genome.fasta";
+
+
+
+
+foreach $chrom (@ARGV){
+	$pm->start and next; ## fork
+        $chrom =~ /chrom([0-9\.]+)/ or die "failed here: $chrom\n";
+	$out = "o_lycpool_chrom$1";
+	system "bcftools mpileup -b bams -d 1000 -f $genome -R $chrom -a FORMAT/DP,FORMAT/AD -q 20 -Q 30 -I -Ou | bcftools call -v -c -p 0.01 -Ov -o $out"."vcf\n";
+	#system "bcftools mpileup -S bams -d 1000 -f $genome -R $chrom -q 20 -Q 30 -I -t DP,AD,ADF,ADR -Ou | bcftools call -v -c -p 0.01 -Ov -o $out.vcf\n";
+
+
+	$pm->finish;
+
+}
+
+$pm->wait_all_children;
+```
+Note that each chromosome (big scaffold) is being processes separately (chrom*list). 
+
+# Preliminary analyses based on `bcftools` results
+
+I did some quick, preliminary analyses based on the above calling with `bcftools`. All of this is in /uufs/chpc.utah.edu/common/home/gompert-group2/data/Lycaeides_poolSeq/Variants/.
+
+First, I used `GATK` version (4.1.4.1) for some simple filtering of the variants, keeping only those with mapping quality > 30 and a depth > 1750.
+
+```perl
+#!/usr/bin/perl
+#
+# filter vcf files 
+#
+
+
+use Parallel::ForkManager;
+my $max = 48;
+my $pm = Parallel::ForkManager->new($max);
+
+
+foreach $vcf (@ARGV){
+	$pm->start and next; ## fork
+	$o = $vcf;
+	$o =~ s/o_// or die "failed sub $vcf\n";
+	system "bgzip $vcf\n";
+	system "tabix $vcf.gz\n";
+	system "java -jar /uufs/chpc.utah.edu/sys/installdir/gatk/gatk-4.1.4.1/gatk-package-4.1.4.1-local.jar IndexFeatureFile -I $vcf.gz\n";
+	system "java -jar /uufs/chpc.utah.edu/sys/installdir/gatk/gatk-4.1.4.1/gatk-package-4.1.4.1-local.jar VariantFiltration -R /uufs/chpc.utah.edu/common/home/gompert-group3/data/LmelGenome/Lmel_dovetailPacBio_genome.fasta -V $vcf.gz -O filt_$o.gz --filter-name \"depth\" --filter-expression \"DP < 1750\" --filter-name \"mapping\" --filter-expression \"MQ < 30\"\n";
+	system "bgzip -d filt_$o.gz\n";
+
+	$pm->finish;
+
+}
+
+$pm->wait_all_children;
+```
+
+Then I extracted the allele depths from the filtered vcf files,
+
+```bash
+#!/usr/bin/bash
+#
+# extract allele depth AD from biallelic SNPs that passed filtering 
+#
+
+for f in filt*vcf
+do
+	echo "Processing $f"
+	out="$(echo $f | sed -e 's/vcf/txt/')"
+	echo "Output is ad1_$out"
+	grep ^Sc $f | grep PASS | grep -v [ATCG],[ATCG] | perl -p -i -e 's/^.+AD\s+//' | perl -p -i -e 's/\S+:(\d+),(\d+)/\1/g' > ad1_$out   
+	grep ^Sc $f | grep PASS | grep -v [ATCG],[ATCG] | perl -p -i -e 's/^.+AD\s+//' | perl -p -i -e 's/\S+:(\d+),(\d+)/\2/g' > ad2_$out
+done
+```
+This creates allele depth files for each allele (ad1* and ad2*) and chromosome, which I am using to get quick and dirty estiamtes for allele frequencies (eventually I want to use a mulativariate normal prior for this). I conducted PCAs and estimates of Fst by chromosome, along with window-based Fst scans for some populations. The code is [pcaFst.R](pcaFst.R). It all generally makes sense. The Eurasian sample is clearly the outgroup (followed by the Alaskan samples), replicates are very similar, and so are temporal samples to a lesser extent. Most chromosomes have similar samples though the Z stands out, and interstingly puts ABM closer to idas and anna. The PCA is attached [WG_LG_PCAs.pdf](https://github.com/zgompert/LycSpaceTimePoolSeq/files/10094994/WG_LG_PCAs.pdf).
+
+
+
