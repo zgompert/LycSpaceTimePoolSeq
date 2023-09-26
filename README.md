@@ -1,5 +1,5 @@
 # LycSpaceTimePoolSeq
-Notes on my analyses of our pool-seq Lycaeides space-time data set. See [Pool_DNA_plates](https://drive.google.com/drive/folders/1U4AsshyMvlySNtODuSLWo0dYDH_rgho4) for details on samples and sample concentrations.
+Notes on my analyses of our pool-seq Lycaeides space-time data set. See [Pool_DNA_plates](https://drive.google.com/drive/folders/1U4AsshyMvlySNtODuSLWo0dYDH_rgho4) for details on samples and sample concentrations. See [sample spreadsheet](https://docs.google.com/spreadsheets/d/1cjCKkcdrZC_qvlOoftGoaaN6GEYMxUKsNFAPdVw4XNo/edit#gid=0) for a spreadsheet of samples that have been sequenced and that are in the process of being extracted and prepared for sequencing.
 
 # Data
 The pool-seq data are currently in /uufs/chpc.utah.edu/common/home/gompert-group2/data/Lycaeides_poolSeq/. THere is the current list of samples, which includes sequencing efforts from 2022 and 2023 (one batch in 2022, two in 2023, samples for all are listed but asterisks denote the second 2023 as sequencing for these is still underway).
