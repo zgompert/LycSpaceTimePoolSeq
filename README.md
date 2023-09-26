@@ -7,8 +7,8 @@ The pool-seq data are currently in /uufs/chpc.utah.edu/common/home/gompert-group
 | Population | Samples (N)|
 |------------|------------|
 | ABM | ABM12 (), ABM20 (48) |
-| BAT | *BAT20 () | 
-| BCR | BCR10 (), BCR13 (), BCR15 (), BCR17 (48), BCR17rep (48) |
+| BAT | \*BAT20 () | 
+| BCR | BCR10 (), BCR13 (), BCR15 (), BCR17 (48), BCR17rep (48), \*BCR18 ()|
 | BHP | BHP11 (), BHP19 (48) |
 | BKM | BKM12 (), BKM19 (33) |
 | BLD | BLD14 () |
