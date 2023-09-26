@@ -20,27 +20,27 @@ The pool-seq data are currently in /uufs/chpc.utah.edu/common/home/gompert-group
 | GNP | GNP08 (24), GNP10 (20), GNP12 (48), GNP13 (47), GNP15(48),  GNP17 (56), GNP21 (46) |
 | GV | GV98 (31) | 
 | HJ | HJ20 (48) |
-| HNV | HNV13 (), HNV15 (), \*HNV16 (), HNV17 (48), HNV20 (), \*HNV21 (), \*HNV22 () |
-| HUM | HUM20 () |
-| LAE | LAE19 () |
-| LS | LS07 (), LS19 (48) |
+| HNV | HNV13 (45), HNV15 (23), \*HNV16 (), HNV17 (48), HNV20 (30), \*HNV21 (), \*HNV22 () |
+| HUM | HUM20 (62) |
+| LAE | LAE19 (45) |
+| LS | LS07 (18), LS19 (48) |
 | MEN | MEN12 (10) |
-| MR | MR98 (44), MR07 (), MR12 (), MR19 (), MR20 (48) |
+| MR | MR98 (44), MR07 (16), MR12 (48), MR19 (40), MR20 (48) |
 | MTU | MTU20 (48) |
-| PSP | PSP13 (), PSP15 (), PSP17 (), \*PSP21 () |
-| RNV | RNV12 (), RNV13 (), RNV14 (), RNV17 (), \*RNV21 (), \*RNV22 () |
+| PSP | PSP13 (39), PSP15 (46), PSP17 (48), \*PSP21 () |
+| RNV | RNV12 (32), RNV13 (46), RNV14 (46), RNV17 (32), \*RNV21 (), \*RNV22 () |
 | SBW | SBW18 (20) |
 | SHC | SHC11 (46) |
 | SIN | SIN10 (48) |
-| SKI | SKI13 (), SKI14 (), SKI17 (), \*SKI19 (), SKI20 (), \*SKI12 (), \*SKI22 () |
+| SKI | SKI13 (47), SKI14 (47), SKI17 (46), \*SKI19 (), SKI20 (44), \*SKI21 (), \*SKI22 () |
 | SUV | SUV20 (51) |
 | TBY | TBY11 (24) |
 | TIC | TIC19 (48) |
-| USL | USL13 (), USL15 (), \*USL16 (), USL17 (), \*USL21 (), \*USL22 () |
+| USL | USL13 (43), USL-02 (3) (see note), USL15 (48), \*USL16 (), USL17 (48), \*USL21 (), \*USL22 () |
 | VE | VE06 (48), VE20 (48) |
 | YG | YT98 (33), YG20 (48) |
 
-Replicates (rep) are the same DNA extractions re-pooled and sequenced as a distinct sample. MEN = outgroup. The data were generated and cleaned up by BGI. Reports for each round of sequencing are attached: 
+Replicates (rep) are the same DNA extractions re-pooled and sequenced as a distinct sample. Samples denote X-2 are based on distinct sets of indivdiuals (need to verify this). MEN = outgroup. The data were generated and cleaned up by BGI. Reports for each round of sequencing are attached: 
 
 2022 : [BGI_F22FTSUSAT0310-01_LYCgpswR_report_en.pdf](https://github.com/zgompert/LycSpaceTimePoolSeq/files/9940314/BGI_F22FTSUSAT0310-01_LYCgpswR_report_en.pdf)
 
