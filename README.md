@@ -2,31 +2,40 @@
 Notes on my analyses of our pool-seq Lycaeides space-time data set. See [Pool_DNA_plates](https://drive.google.com/drive/folders/1U4AsshyMvlySNtODuSLWo0dYDH_rgho4) for details on samples and sample concentrations.
 
 # Data
-The pool-seq data are currently in /uufs/chpc.utah.edu/common/home/gompert-group2/data/Lycaeides_poolSeq/. The current list of samples follows (this is from a single round of sequencing):
+The pool-seq data are currently in /uufs/chpc.utah.edu/common/home/gompert-group2/data/Lycaeides_poolSeq/. THere is the current list of samples, which includes sequencing efforts from 2022 and 2023 (one batch in 2022, two in 2023, samples for all are listed but asterisks denote the second 2023 as sequencing for these is still underway).
 
 | Population | Samples (N)|
 |------------|------------|
-| ABM | ABM20 (48) |
-| BCR | BCR17 (48), BCR17rep (48) |
-| BHP | BHP19 (48) |
-| BKM | BKM19 (33) |
-| BTB | BTB10 (38), BTB13 (48), BTB13rep (48), BTB17 (48), BTB17rep (48) |
-| CLH | CLH19 (36) |
-| CP | CP98 (37), CP01 (44), CP19 (48), CP19rep (48) |
-| EP | EP19 (48), EP19rep (48) | 
-| GNP | GNP17 (56) |
+| ABM | ABM12 (), ABM20 (48) |
+| BAT | *BAT20 () | 
+| BCR | BCR10 (), BCR13 (), BCR15 (), BCR17 (48), BCR17rep (48) |
+| BHP | BHP11 (), BHP19 (48) |
+| BKM | BKM12 (), BKM19 (33) |
+| BLD | BLD14 () |
+| BNP | BNP13 (), BNP15 () |
+| BTB | BTB10 (38), BTB13 (48), BTB13rep (48), BTB14 (), BTB15 (), BTB17 (48), BTB17rep (48), BTB21 () |
+| CLH | CLH11 (), CLH19 (36) |
+| CP | CP98 (37), CP01 (44), CP04 (), CP12 (), CP19 (48), CP19rep (48), CP20 () |
+| EP | EP98 (), EP04 (), EP11 (), EP19 (48), EP19rep (48) | 
+| GNP | GNP08 (), GNP10 (), GNP12 (), GNP13 (), GNP15(),  GNP17 (56), GNP21 () |
 | HJ | HJ20 (48) |
-| HNV | HNV17 (48) |
-| LS | LS19 (48) |
+| HNV | HNV13 (), HNV15 (), HNV17 (48), HNV20 () |
+| HUM | HUM20 () |
+| LAE | LAE19 () |
+| LS | LS07 (), LS19 (48) |
 | MEN | MEN12 (10) |
-| MR | MR98 (44), MR20 (48) |
+| MR | MR98 (44), MR07 (), MR12 (), MR19 (), MR20 (48) |
 | MTU | MTU20 (48) |
+| PSP | PSP13 (), PSP15 (), PSP17 () |
+| RNV | RNV12 (), RNV13 (), RNV14 (), RNV17 () |
 | SBW | SBW18 (20) |
 | SHC | SHC11 (46) |
 | SIN | SIN10 (48) |
+| SKI | SKI13 (), SKI14 (), SKI17 (), SKI20 () |
 | SUV | SUV20 (51) |
 | TBY | TBY11 (24) |
 | TIC | TIC19 (48) |
+| USL | USL13 (), USL15 (), USL17 () |
 | VE | VE06 (48), VE20 (48) |
 | YG | YT98 (33), YG20 (48) |
 
