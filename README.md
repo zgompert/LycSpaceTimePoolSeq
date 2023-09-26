@@ -8,39 +8,42 @@ The pool-seq data are currently in /uufs/chpc.utah.edu/common/home/gompert-group
 |------------|------------|
 | ABM | ABM12 (), ABM20 (48) |
 | BAT | \*BAT20 () | 
-| BCR | BCR10 (), BCR13 (), BCR15 (), BCR17 (48), BCR17rep (48), \*BCR18 ()|
+| BCR | BCR10 (), BCR13 (), BCR15 (), BCR17 (48), BCR17rep (48), \*BCR18 (), \*BCR21 (), \*BCR22 () |
 | BHP | BHP11 (), BHP19 (48) |
 | BKM | BKM12 (), BKM19 (33) |
-| BLD | BLD14 () |
-| BNP | BNP13 (), BNP15 () |
-| BTB | BTB10 (38), BTB13 (48), BTB13rep (48), BTB14 (), BTB15 (), BTB17 (48), BTB17rep (48), BTB21 () |
+| BLD | BLD14 (), \*BLD20 (), \*BLD21 (), \*BLD22 () |
+| BNP | BNP13 (), BNP15 (), \*BNP19 (), \*BNP21 (), \*BNP22 () |
+| BTB | BTB10 (38), BTB13 (48), BTB13rep (48), BTB14 (), BTB15 (), \*BTB16 (), BTB17 (48), BTB17rep (48), \*BTB19 (), \*BTB20 (), BTB21 () |
 | CLH | CLH11 (), CLH19 (36) |
 | CP | CP98 (37), CP01 (44), CP04 (), CP12 (), CP19 (48), CP19rep (48), CP20 () |
 | EP | EP98 (), EP04 (), EP11 (), EP19 (48), EP19rep (48) | 
 | GNP | GNP08 (), GNP10 (), GNP12 (), GNP13 (), GNP15(),  GNP17 (56), GNP21 () |
+| GV | GV98 () | 
 | HJ | HJ20 (48) |
-| HNV | HNV13 (), HNV15 (), HNV17 (48), HNV20 () |
+| HNV | HNV13 (), HNV15 (), \*HNV16 (), HNV17 (48), HNV20 (), \*HNV21 (), \*HNV22 () |
 | HUM | HUM20 () |
 | LAE | LAE19 () |
 | LS | LS07 (), LS19 (48) |
 | MEN | MEN12 (10) |
 | MR | MR98 (44), MR07 (), MR12 (), MR19 (), MR20 (48) |
 | MTU | MTU20 (48) |
-| PSP | PSP13 (), PSP15 (), PSP17 () |
-| RNV | RNV12 (), RNV13 (), RNV14 (), RNV17 () |
+| PSP | PSP13 (), PSP15 (), PSP17 (), \*PSP21 () |
+| RNV | RNV12 (), RNV13 (), RNV14 (), RNV17 (), \*RNV21 (), \*RNV22 () |
 | SBW | SBW18 (20) |
 | SHC | SHC11 (46) |
 | SIN | SIN10 (48) |
-| SKI | SKI13 (), SKI14 (), SKI17 (), SKI20 () |
+| SKI | SKI13 (), SKI14 (), SKI17 (), \*SKI19 (), SKI20 (), \*SKI12 (), \*SKI22 () |
 | SUV | SUV20 (51) |
 | TBY | TBY11 (24) |
 | TIC | TIC19 (48) |
-| USL | USL13 (), USL15 (), USL17 () |
+| USL | USL13 (), USL15 (), \*USL16 (), USL17 (), \*USL21 (), \*USL22 () |
 | VE | VE06 (48), VE20 (48) |
 | YG | YT98 (33), YG20 (48) |
 
-Replicates (rep) are the same DNA extractions re-pooled and sequenced as a distinct sample. MEN = outgroup. The data were generated and cleaned up by BGI. Reports for each round of sequencing are attached: [BGI_F22FTSUSAT0310-01_LYCgpswR_report_en.pdf](https://github.com/zgompert/LycSpaceTimePoolSeq/files/9940314/BGI_F22FTSUSAT0310-01_LYCgpswR_report_en.pdf)
+Replicates (rep) are the same DNA extractions re-pooled and sequenced as a distinct sample. MEN = outgroup. The data were generated and cleaned up by BGI. Reports for each round of sequencing are attached: 
+2022 : [BGI_F22FTSUSAT0310-01_LYCgpswR_report_en.pdf](https://github.com/zgompert/LycSpaceTimePoolSeq/files/9940314/BGI_F22FTSUSAT0310-01_LYCgpswR_report_en.pdf)
 . 
+2023.1 : 
 
 # DNA Sequence Alignment
 
