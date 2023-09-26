@@ -6,19 +6,19 @@ The pool-seq data are currently in /uufs/chpc.utah.edu/common/home/gompert-group
 
 | Population | Samples (N)|
 |------------|------------|
-| ABM | ABM12 (), ABM20 (48) |
+| ABM | ABM12 (38), ABM20 (48) |
 | BAT | \*BAT20 () | 
-| BCR | BCR10 (), BCR13 (), BCR15 (), BCR17 (48), BCR17rep (48), \*BCR18 (), \*BCR21 (), \*BCR22 () |
-| BHP | BHP11 (), BHP19 (48) |
-| BKM | BKM12 (), BKM19 (33) |
-| BLD | BLD14 (), \*BLD20 (), \*BLD21 (), \*BLD22 () |
-| BNP | BNP13 (), BNP15 (), \*BNP19 (), \*BNP21 (), \*BNP22 () |
-| BTB | BTB10 (38), BTB13 (48), BTB13rep (48), BTB14 (), BTB15 (), \*BTB16 (), BTB17 (48), BTB17rep (48), \*BTB19 (), \*BTB20 (), BTB21 () |
-| CLH | CLH11 (), CLH19 (36) |
-| CP | CP98 (37), CP01 (44), CP04 (), CP12 (), CP19 (48), CP19rep (48), CP20 () |
-| EP | EP98 (), EP04 (), EP11 (), EP19 (48), EP19rep (48) | 
-| GNP | GNP08 (), GNP10 (), GNP12 (), GNP13 (), GNP15(),  GNP17 (56), GNP21 () |
-| GV | GV98 () | 
+| BCR | BCR10 (34), BCR13 (48), BCR15 (37), BCR17 (48), BCR17rep (48), \*BCR18 (), \*BCR21 (), \*BCR22 () |
+| BHP | BHP11 (34), BHP19 (48) |
+| BKM | BKM12 (43), BKM19 (33) |
+| BLD | BLD14 (37), \*BLD20 (), \*BLD21 (), \*BLD22 () |
+| BNP | BNP13 (45), BNP15 (48), \*BNP19 (), \*BNP21 (), \*BNP22 () |
+| BTB | BTB10 (38), BTB13 (48), BTB13rep (48), BTB14 (48), BTB15 (51), \*BTB16 (), BTB17 (48), BTB17rep (48), \*BTB19 (), \*BTB20 (), BTB21 (48) |
+| CLH | CLH11 (40), CLH19 (36) |
+| CP | CP98 (37), CP01 (44), CP04 (32), CP12 (50), CP19 (48), CP19rep (48), CP20 (21) |
+| EP | EP98 (24), EP04 (35), EP11 (23), EP19 (48), EP19rep (48) | 
+| GNP | GNP08 (24), GNP10 (20), GNP12 (48), GNP13 (47), GNP15(48),  GNP17 (56), GNP21 (46) |
+| GV | GV98 (31) | 
 | HJ | HJ20 (48) |
 | HNV | HNV13 (), HNV15 (), \*HNV16 (), HNV17 (48), HNV20 (), \*HNV21 (), \*HNV22 () |
 | HUM | HUM20 () |
