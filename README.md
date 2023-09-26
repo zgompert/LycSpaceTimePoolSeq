@@ -41,9 +41,11 @@ The pool-seq data are currently in /uufs/chpc.utah.edu/common/home/gompert-group
 | YG | YT98 (33), YG20 (48) |
 
 Replicates (rep) are the same DNA extractions re-pooled and sequenced as a distinct sample. MEN = outgroup. The data were generated and cleaned up by BGI. Reports for each round of sequencing are attached: 
+
 2022 : [BGI_F22FTSUSAT0310-01_LYCgpswR_report_en.pdf](https://github.com/zgompert/LycSpaceTimePoolSeq/files/9940314/BGI_F22FTSUSAT0310-01_LYCgpswR_report_en.pdf)
-. 
-2023.1 : 
+
+2023.1 : [BGI_F23A480000192_BUTpzedR_report_en.pdf](https://github.com/zgompert/LycSpaceTimePoolSeq/files/12721448/BGI_F23A480000192_BUTpzedR_report_en.pdf)
+
 
 # DNA Sequence Alignment
 
