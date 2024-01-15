@@ -2,41 +2,41 @@
 Notes on my analyses of our pool-seq Lycaeides space-time data set. See [Pool_DNA_plates](https://drive.google.com/drive/folders/1U4AsshyMvlySNtODuSLWo0dYDH_rgho4) for details on samples and sample concentrations. See [sample spreadsheet](https://docs.google.com/spreadsheets/d/1cjCKkcdrZC_qvlOoftGoaaN6GEYMxUKsNFAPdVw4XNo/edit#gid=0) for a spreadsheet of samples that have been sequenced and that are in the process of being extracted and prepared for sequencing.
 
 # Data
-The pool-seq data are currently in /uufs/chpc.utah.edu/common/home/gompert-group2/data/Lycaeides_poolSeq/. THere is the current list of samples, which includes sequencing efforts from 2022 and 2023 (one batch in 2022, two in 2023, samples for all are listed but asterisks denote the second 2023 as sequencing for these is still underway).
+The pool-seq data are currently in /uufs/chpc.utah.edu/common/home/gompert-group2/data/Lycaeides_poolSeq/. Here is the current list of samples, which includes sequencing efforts from 2022 and 2023 (one batch in 2022, two in 2023).
 
 | Population | Samples (N)|
 |------------|------------|
 | ABM | ABM12 (38), ABM20 (48) |
-| BAT | \*BAT20 () | 
-| BCR | BCR10 (34), BCR13 (48), BCR15 (37), BCR17 (48), BCR17rep (48), \*BCR18 (), \*BCR21 (), \*BCR22 () |
+| BAT | BAT20 (48) | 
+| BCR | BCR10 (34), BCR13 (48), BCR15 (37), BCR17 (48), BCR17rep (48), BCR18 (48), \*BCR21 (), BCR22 (48) |
 | BHP | BHP11 (34), BHP19 (48) |
 | BKM | BKM12 (43), BKM19 (33) |
-| BLD | BLD14 (37), \*BLD20 (), \*BLD21 (), \*BLD22 () |
-| BNP | BNP13 (45), BNP15 (48), \*BNP19 (), \*BNP21 (), \*BNP22 () |
-| BTB | BTB10 (38), BTB13 (48), BTB13rep (48), BTB14 (48), BTB15 (51), \*BTB16 (), BTB17 (48), BTB17rep (48), \*BTB19 (), \*BTB20 (), BTB21 (48) |
+| BLD | BLD14 (37), BLD20 (48), BLD21 (47), BLD22 (48) |
+| BNP | BNP13 (45), BNP15 (48), BNP19 (34), BNP21 (48), BNP22 (48) |
+| BTB | BTB10 (38), BTB13 (48), BTB13rep (48), BTB14 (48), BTB15 (51), BTB16 (48), BTB17 (48), BTB17rep (48), BTB18 (48), BTB19 (48), BTB21 (48), BTB22 (48) |
 | CLH | CLH11 (40), CLH19 (36) |
 | CP | CP98 (37), CP01 (44), CP04 (32), CP12 (50), CP19 (48), CP19rep (48), CP20 (21) |
 | EP | EP98 (24), EP04 (35), EP11 (23), EP19 (48), EP19rep (48) | 
 | GNP | GNP08 (24), GNP10 (20), GNP12 (48), GNP13 (47), GNP15(48),  GNP17 (56), GNP21 (46) |
 | GV | GV98 (31) | 
 | HJ | HJ20 (48) |
-| HNV | HNV13 (45), HNV15 (23), \*HNV16 (), HNV17 (48), HNV20 (30), \*HNV21 (), \*HNV22 () |
+| HNV | HNV13 (45), HNV15 (23), HNV16 (48), HNV17 (48), HNV20 (30), HNV21 (30), HNV22 (30) |
 | HUM | HUM20 (62) |
 | LAE | LAE19 (45) |
 | LS | LS07 (18), LS19 (48) |
 | MEN | MEN12 (10) |
 | MR | MR98 (44), MR07 (16), MR12 (48), MR19 (40), MR20 (48) |
 | MTU | MTU20 (48) |
-| PSP | PSP13 (39), PSP15 (46), PSP17 (48), \*PSP21 () |
-| RNV | RNV12 (32), RNV13 (46), RNV14 (46), RNV17 (32), \*RNV21 (), \*RNV22 () |
+| PSP | PSP13 (39), PSP15 (46), PSP17 (48), PSP21 (48) |
+| RNV | RNV12 (32), RNV13 (46), RNV14 (46), RNV17 (32), RNV21 (48), RNV22 (48) |
 | SBW | SBW18 (20) |
 | SHC | SHC11 (46) |
 | SIN | SIN10 (48) |
-| SKI | SKI13 (47), SKI14 (47), SKI17 (46), \*SKI19 (), SKI20 (44), \*SKI21 (), \*SKI22 () |
+| SKI | SKI13 (47), SKI14 (47), SKI17 (46), SKI19 (47), SKI20 (44), SKI21 (48), SKI22 (48) |
 | SUV | SUV20 (51) |
 | TBY | TBY11 (24) |
 | TIC | TIC19 (48) |
-| USL | USL13 (43), USL-02 (3) (see note), USL15 (48), \*USL16 (), USL17 (48), \*USL21 (), \*USL22 () |
+| USL | USL13 (43), USL-02 (3) (see note), USL15 (48), USL16 (57), USL17 (48), USL21 (48), USL22 (48) |
 | VE | VE06 (48), VE20 (48) |
 | YG | YT98 (33), YG20 (48) |
 
