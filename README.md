@@ -2,7 +2,7 @@
 Notes on my analyses of our pool-seq Lycaeides space-time data set. See [Pool_DNA_plates](https://drive.google.com/drive/folders/1U4AsshyMvlySNtODuSLWo0dYDH_rgho4) for details on samples and sample concentrations. See [sample spreadsheet](https://docs.google.com/spreadsheets/d/1cjCKkcdrZC_qvlOoftGoaaN6GEYMxUKsNFAPdVw4XNo/edit#gid=0) for a spreadsheet of samples that have been sequenced and that are in the process of being extracted and prepared for sequencing.
 
 # Data
-The pool-seq data are currently in /uufs/chpc.utah.edu/common/home/gompert-group2/data/Lycaeides_poolSeq/. Here is the current list of samples, which includes sequencing efforts from 2022 and 2023 (one batch in 2022, two in 2023).
+The pool-seq data are currently in /uufs/chpc.utah.edu/common/home/gompert-group2/data/Lycaeides_poolSeq/. Current (as of March 2024) alignments, variant calls and allele counts are in /uufs/chpc.utah.edu/common/home/gompert-group4/data/Lyc_pool_d2/. Here is the current list of samples, which includes sequencing efforts from 2022 and 2023 (one batch in 2022, two in 2023).
 
 | Population | Samples (N)|
 |------------|------------|
@@ -45,6 +45,8 @@ Replicates (rep) are the same DNA extractions re-pooled and sequenced as a disti
 2022 : [BGI_F22FTSUSAT0310-01_LYCgpswR_report_en.pdf](https://github.com/zgompert/LycSpaceTimePoolSeq/files/9940314/BGI_F22FTSUSAT0310-01_LYCgpswR_report_en.pdf)
 
 2023.1 : [BGI_F23A480000192_BUTpzedR_report_en.pdf](https://github.com/zgompert/LycSpaceTimePoolSeq/files/12721448/BGI_F23A480000192_BUTpzedR_report_en.pdf)
+
+2023.2 : [BGI_F23A480000782_BUTdafnR_report_en.pdf](https://github.com/zgompert/LycSpaceTimePoolSeq/files/14924484/BGI_F23A480000782_BUTdafnR_report_en.pdf)
 
 
 # DNA Sequence Alignment
