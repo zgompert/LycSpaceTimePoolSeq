@@ -1,4 +1,5 @@
 ## PCA and Fst by chomromsome 
+## this code was written for the first two sets of sequence data
 
 library(data.table)
 
