@@ -1,4 +1,3 @@
-[Report_F24A480000157_BUTlgxuR_report_en.pdf](https://github.com/zgompert/LycSpaceTimePoolSeq/files/15340094/Report_F24A480000157_BUTlgxuR_report_en.pdf)
 # LycSpaceTimePoolSeq
 Notes on my analyses of our pool-seq Lycaeides space-time data set. See [Pool_DNA_plates](https://drive.google.com/drive/folders/1U4AsshyMvlySNtODuSLWo0dYDH_rgho4) for details on samples and sample concentrations. See [sample spreadsheet](https://docs.google.com/spreadsheets/d/1cjCKkcdrZC_qvlOoftGoaaN6GEYMxUKsNFAPdVw4XNo/edit#gid=0) for a spreadsheet of samples that have been sequenced and that are in the process of being extracted and prepared for sequencing.
 
@@ -49,9 +48,10 @@ Replicates (rep) are the same DNA extractions re-pooled and sequenced as a disti
 
 2023.2 : [BGI_F23A480000782_BUTdafnR_report_en.pdf](https://github.com/zgompert/LycSpaceTimePoolSeq/files/14924484/BGI_F23A480000782_BUTdafnR_report_en.pdf)
 
-2024.1 : [Report_F24A480000157_BUTlgxuR_report_en.pdf]
+2024.1 : [Report_F24A480000157_BUTlgxuR_report_en.pdf](https://github.com/zgompert/LycSpaceTimePoolSeq/files/15340094/Report_F24A480000157_BUTlgxuR_report_en.pdf)
 
-2024.2 (museum) : 
+2024.2 (museum) : [Report_F24A480000158_BUTrtcnR_en.pdf](https://github.com/zgompert/LycSpaceTimePoolSeq/files/15340107/Report_F24A480000158_BUTrtcnR_en.pdf)
+ 
 # DNA Sequence Alignment
 
 I am aligning the DNA sequence data to the updated (based on PacBio) *L. melissa* genome. I am using `bwa-mem2` for this, which is basically just a sped up version of `bwa mem` that also works directly with gzipped files [https://github.com/bwa-mem2/bwa-mem2](https://github.com/bwa-mem2/bwa-mem2). I am using `bwa-mem2` version 2.0pre2. 
