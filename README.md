@@ -2,7 +2,7 @@
 Notes on my analyses of our pool-seq Lycaeides space-time data set. See [Pool_DNA_plates](https://drive.google.com/drive/folders/1U4AsshyMvlySNtODuSLWo0dYDH_rgho4) for details on samples and sample concentrations. See [sample spreadsheet](https://docs.google.com/spreadsheets/d/1cjCKkcdrZC_qvlOoftGoaaN6GEYMxUKsNFAPdVw4XNo/edit#gid=0) for a spreadsheet of samples that have been sequenced and that are in the process of being extracted and prepared for sequencing.
 
 # Data
-The pool-seq data are currently in /uufs/chpc.utah.edu/common/home/gompert-group2/data/Lycaeides_poolSeq/. Current (as of March 2024) alignments, variant calls and allele counts are in /uufs/chpc.utah.edu/common/home/gompert-group4/data/Lyc_pool_d2/. Here is the current list of samples, which includes sequencing efforts from 2022 and 2023 (one batch in 2022, two in 2023).
+The pool-seq data are currently in /uufs/chpc.utah.edu/common/home/gompert-group2/data/Lycaeides_poolSeq/. Current (as of March 2024) alignments, variant calls and allele counts are in /uufs/chpc.utah.edu/common/home/gompert-group4/data/Lyc_pool_d2/. Here is the current list of samples, which includes sequencing efforts from 2022, 2023 and 2024 (one batch in 2022, two in 2023, and two in 2024, including one of museum specimens).
 
 | Population | Samples (N)|
 |------------|------------|
@@ -48,7 +48,9 @@ Replicates (rep) are the same DNA extractions re-pooled and sequenced as a disti
 
 2023.2 : [BGI_F23A480000782_BUTdafnR_report_en.pdf](https://github.com/zgompert/LycSpaceTimePoolSeq/files/14924484/BGI_F23A480000782_BUTdafnR_report_en.pdf)
 
+2024.1
 
+2024.2 (museum) : 
 # DNA Sequence Alignment
 
 I am aligning the DNA sequence data to the updated (based on PacBio) *L. melissa* genome. I am using `bwa-mem2` for this, which is basically just a sped up version of `bwa mem` that also works directly with gzipped files [https://github.com/bwa-mem2/bwa-mem2](https://github.com/bwa-mem2/bwa-mem2). I am using `bwa-mem2` version 2.0pre2. 
