@@ -48,7 +48,7 @@ Replicates (rep) are the same DNA extractions re-pooled and sequenced as a disti
 
 2023.2 : [BGI_F23A480000782_BUTdafnR_report_en.pdf](https://github.com/zgompert/LycSpaceTimePoolSeq/files/14924484/BGI_F23A480000782_BUTdafnR_report_en.pdf)
 
-2024.1
+2024.1 : [Report_F24A480000157_BUTlgxuR_report_en.pdf]
 
 2024.2 (museum) : 
 # DNA Sequence Alignment
@@ -57,7 +57,8 @@ I am aligning the DNA sequence data to the updated (based on PacBio) *L. melissa
 
 First, I (re)indexed the reference genome.
 
-```bash
+```bash[Report_F24A480000157_BUTlgxuR_report_en.pdf](https://github.com/zgompert/LycSpaceTimePoolSeq/files/15340067/Report_F24A480000157_BUTlgxuR_report_en.pdf)
+
 ## index genome with bwa-mem2
 /uufs/chpc.utah.edu/common/home/u6000989/source/bwa-mem2-2.0pre2_x64-linux/bwa-mem2 index /uufs/chpc.utah.edu/common/home/gompert-group3/data/LmelGenome/Lmel_dovetailPacBio_genome.fasta
 ```
