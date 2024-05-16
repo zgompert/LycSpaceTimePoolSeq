@@ -1,3 +1,4 @@
+[Report_F24A480000157_BUTlgxuR_report_en.pdf](https://github.com/zgompert/LycSpaceTimePoolSeq/files/15340094/Report_F24A480000157_BUTlgxuR_report_en.pdf)
 # LycSpaceTimePoolSeq
 Notes on my analyses of our pool-seq Lycaeides space-time data set. See [Pool_DNA_plates](https://drive.google.com/drive/folders/1U4AsshyMvlySNtODuSLWo0dYDH_rgho4) for details on samples and sample concentrations. See [sample spreadsheet](https://docs.google.com/spreadsheets/d/1cjCKkcdrZC_qvlOoftGoaaN6GEYMxUKsNFAPdVw4XNo/edit#gid=0) for a spreadsheet of samples that have been sequenced and that are in the process of being extracted and prepared for sequencing.
 
