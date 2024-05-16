@@ -11,33 +11,35 @@ The pool-seq data are currently in /uufs/chpc.utah.edu/common/home/gompert-group
 | BCR | BCR08 (XX), BCR09 (XX), BCR10 (34), BCR12 (XX), BCR13 (48), BCR14 (XX), BCR15 (37), BCR16 (XX), BCR17 (48), BCR17rep (48), BCR18 (48), BCR19 (XX), BCR20 (XX), BCR21 (58), BCR22 (48), BCR23 (XX) |
 | BHP | BHP11 (34), BHP19 (48) |
 | BKM | BKM12 (43), BKM19 (33) |
-| BLD | BLD14 (37), BLD20 (48), BLD21 (47), BLD22 (48) |
-| BNP | BNP13 (45), BNP15 (48), BNP19 (34), BNP21 (48), BNP22 (48) |
-| BTB | BTB10 (38), BTB13 (48), BTB13rep (48), BTB14 (48), BTB15 (51), BTB16 (48), BTB17 (48), BTB17rep (48), BTB18 (48), BTB19 (48), BTB21 (48), BTB22 (48) |
-| CLH | CLH11 (40), CLH19 (36) |
-| CP | CP98 (37), CP01 (44), CP04 (32), CP12 (50), CP19 (48), CP19rep (48), CP20 (21) |
+| BLD | BLD13 (XX), BLD14 (37), BLD19 (XX), BLD20 (48), BLD21 (47), BLD22 (48), BLD23 (XX) |
+| BNP | BNP08 (XX), BNP09 (XX), BNP10 (XX), BNP12 (XX), BNP13 (45), BNP14 (XX), BNP15 (48), BNP16 (XX), BNP17 (XX), BNP18 (XX), BNP19 (34), BNP21 (48), BNP22 (48), BNP23 (XX) |
+| BTB | BTB08 (XX), BTB09 (XX), BTB10 (38), BTB12 (XX), BTB13 (48), BTB13rep (48), BTB14 (48), BTB15 (51), BTB16 (48), BTB16rep (2024.1) (XX), BTB17 (48), BTB17rep (48), BTB18 (48), BTB19 (48), BTB20 (XX) BTB21 (48), BTB22 (48), BTB23 (XX) |
+| CLH | CLH11 (40), CLH19 (36), CLH23 (XX) |
+| CP | CP98 (37), CP01 (44), CP04 (32), CP12 (50), CP19 (48), CP19rep (48), CP20 (21), CP23 (XX) |
 | EP | EP98 (24), EP04 (35), EP11 (23), EP19 (48), EP19rep (48) | 
-| GNP | GNP08 (24), GNP10 (20), GNP12 (48), GNP13 (47), GNP15(48),  GNP17 (56), GNP21 (46) |
+| GNP | GNP08 (24), GNP10 (20), GNP12 (48), GNP13 (47), GNP14 (XX), GNP15(48),  GNP16 (XX), GNP17 (56), GNP19 (XX), GNP20 (XX), GNP21 (46), GNP23 (XX) |
 | GV | GV98 (31) | 
 | HJ | HJ20 (48) |
-| HNV | HNV13 (45), HNV15 (23), HNV16 (48), HNV17 (48), HNV20 (30), HNV21 (30), HNV22 (30) |
+| HNV | HNV08 (XX), HNV13 (45), HNV14 (XX), HNV15 (23), HNV16 (48), HNV17 (48), HNV18 (XX), HNV19 (XX), HNV20 (30), HNV21 (30), HNV22 (30), HNV23 (XX) |
 | HUM | HUM20 (62) |
 | LAE | LAE19 (45) |
-| LS | LS07 (18), LS19 (48) |
+| LS | LS07 (18), LS19 (48), LS23 (XX) |
 | MEN | MEN12 (10) |
-| MR | MR98 (44), MR07 (16), MR12 (48), MR19 (40), MR20 (48) |
+| MR | MR98 (44), MR07 (16), MR12 (48), MR19 (40), MR20 (48), MR23 (XX) |
+| MRF | MRF07 (XX), MRF14 (XX), MRF16 (XX), MRF18 (XX), MRF19 (XX) |
 | MTU | MTU20 (48) |
-| PSP | PSP13 (39), PSP15 (46), PSP17 (48), PSP21 (48) |
-| RNV | RNV12 (32), RNV13 (46), RNV14 (46), RNV17 (32), RNV21 (48), RNV22 (48) |
+| PSP | PSP13 (39), PSP14 (XX), PSP15 (46), PSP16 (XX), PSP17 (48), PSP18 (XX), PSP19 (XX), PSP20 (XX), PSP21 (48), PSP23 (XX) |
+| RNV | RNV12 (32), RNV13 (46), RNV14 (46), RNV16 (XX), RNV17 (32), RNV18 (XX), RNV19 (XX), RNV21 (48), RNV22 (48), RNV23 (XX) |
 | SBW | SBW18 (20) |
 | SHC | SHC11 (46) |
 | SIN | SIN10 (48) |
-| SKI | SKI13 (47), SKI14 (47), SKI17 (46), SKI19 (47), SKI20 (44), SKI21 (48), SKI22 (48) |
+| SKI | SKI13 (47), SKI14 (47), SKI16 (XX),  SKI17 (46), SKI18 (XX), SKI19 (47), SKI20 (44), SKI21 (48), SKI22 (48), SKI23 (XX) |
 | SUV | SUV20 (51) |
 | TBY | TBY11 (24) |
 | TIC | TIC19 (48) |
-| USL | USL13 (43), USL-02 (3) (see note), USL15 (48), USL16 (57), USL17 (48), USL21 (48), USL22 (48) |
+| USL | USL10 (XX), USL13 (43), USL-02 (3) (see note), USL14 (XX), USL15 (48), USL16 (57), USL17 (48), USL19 (XX), USL21 (48), USL22 (48), USL23 (XX) |
 | VE | VE06 (48), VE20 (48) |
+| VIC | VIC08 (XX) |
 | YG | YT98 (33), YG20 (48) |
 
 Replicates (rep) are the same DNA extractions re-pooled and sequenced as a distinct sample. Samples denote X-2 are based on distinct sets of indivdiuals (need to verify this). MEN = outgroup. The data were generated and cleaned up by BGI. Reports for each round of sequencing are attached: 
